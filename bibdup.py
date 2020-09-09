@@ -9,8 +9,7 @@ from bibparse import split_entries, entry_key
 # Read lines
 lines = None
 if len(sys.argv) < 2:
-    fd = sys.stdin
-    lines = fd.readlines()
+    lines = sys.stdin.readlines()
 elif len(sys.argv) == 2:
     with open(sys.argv[1], mode='r') as fd:
         lines = fd.readlines()
