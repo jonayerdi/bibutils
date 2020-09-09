@@ -14,7 +14,7 @@ elif len(sys.argv) == 2:
     with open(sys.argv[1], mode='r') as fd:
         lines = fd.readlines()
 else:
-    print('Usage: bibsort [BIB_FILE]')
+    print('Usage: bibsort <BIB_FILE>')
     exit()
 # Read and sort entries
 entries = split_entries(lines)

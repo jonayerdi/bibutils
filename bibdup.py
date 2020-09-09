@@ -14,7 +14,7 @@ elif len(sys.argv) == 2:
     with open(sys.argv[1], mode='r') as fd:
         lines = fd.readlines()
 else:
-    print('Usage: bibdup [BIB_FILE]')
+    print('Usage: bibdup <BIB_FILE>')
     exit()
 # Read entries
 entries = split_entries(lines)

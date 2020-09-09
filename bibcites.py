@@ -16,7 +16,7 @@ elif len(sys.argv) == 2:
     with open(sys.argv[1], mode='r') as fd:
         text = fd.read()
 else:
-    print('Usage: bibcites [BIB_FILE]')
+    print('Usage: bibcites <BIB_FILE>')
     exit()
 # Find and print distinct citations
 visited = set()
