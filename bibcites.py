@@ -6,7 +6,7 @@ if __name__ != "__main__":
 import sys
 import re
 
-CITATION = re.compile(r'\\cite{(\w*)}')
+CITATION = re.compile(r'\\cite{([\w\s,]*)}')
 
 # Read text
 text = None
@@ -21,8 +21,10 @@ else:
 # Find and print distinct citations
 visited = set()
 for match in CITATION.finditer(text):
-    citation = match.group(1)
-    if citation not in visited:
-        visited.add(citation)
+    citations = match.group(1)
+    for citation in citations.split(','):
+        citation = citation.strip()
+        if citation not in visited:
+            visited.add(citation)
 for citation in sorted(visited):
     print(citation)
