@@ -11,7 +11,7 @@ lines = None
 if len(sys.argv) < 2:
     lines = sys.stdin.readlines()
 elif len(sys.argv) == 2:
-    with open(sys.argv[1], mode='r') as fd:
+    with open(sys.argv[1], mode='r', encoding='utf-8') as fd:
         lines = fd.readlines()
 else:
     print('Usage: bibsort <BIB_FILE>')

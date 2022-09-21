@@ -13,7 +13,7 @@ text = None
 if len(sys.argv) < 2:
     text = sys.stdin.read()
 elif len(sys.argv) == 2:
-    with open(sys.argv[1], mode='r') as fd:
+    with open(sys.argv[1], mode='r', encoding='utf-8') as fd:
         text = fd.read()
 else:
     print('Usage: bibcites <BIB_FILE>')

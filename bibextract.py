@@ -23,7 +23,7 @@ if len(sys.argv) == 3:
     check = True
 lines = None
 keys = [line.strip() for line in sys.stdin.readlines()]
-with open(bibfile, mode='r') as fd:
+with open(bibfile, mode='r', encoding='utf-8') as fd:
     lines = fd.readlines()
 # Read entries
 entries = { entry_key(entry): entry for entry in split_entries(lines) }
